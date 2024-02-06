@@ -2,4 +2,4 @@
 
 export TOKEN=$(<.token)
 
-php8.3 server.php
+php8.3 src/Server.php

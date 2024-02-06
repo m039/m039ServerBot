@@ -10,6 +10,6 @@ fi
 
 export TOKEN=$(<.token)
 
-nohup php8.3 server.php >/dev/null 2>&1&
+nohup php8.3 src/Server.php >/dev/null 2>&1&
 
 echo $! > $PIDFILE

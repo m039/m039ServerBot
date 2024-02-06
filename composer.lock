@@ -499,16 +499,16 @@
         },
         {
             "name": "nutgram/nutgram",
-            "version": "4.15.1",
+            "version": "4.15.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nutgram/nutgram.git",
-                "reference": "849d748eb95a16244ed96edd0f6b1b021b2a6436"
+                "reference": "81ceeb1f1e9c2121657872c715ceb04a21fe6332"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nutgram/nutgram/zipball/849d748eb95a16244ed96edd0f6b1b021b2a6436",
-                "reference": "849d748eb95a16244ed96edd0f6b1b021b2a6436",
+                "url": "https://api.github.com/repos/nutgram/nutgram/zipball/81ceeb1f1e9c2121657872c715ceb04a21fe6332",
+                "reference": "81ceeb1f1e9c2121657872c715ceb04a21fe6332",
                 "shasum": ""
             },
             "require": {
@@ -567,7 +567,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nutgram/nutgram/issues",
-                "source": "https://github.com/nutgram/nutgram/tree/4.15.1"
+                "source": "https://github.com/nutgram/nutgram/tree/4.15.2"
             },
             "funding": [
                 {
@@ -579,7 +579,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-31T21:13:04+00:00"
+            "time": "2024-02-06T17:58:36+00:00"
         },
         {
             "name": "psr/container",
