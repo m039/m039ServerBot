@@ -4,7 +4,7 @@ PIDFILE=${HOME}/.m039ServerBot.pid
 
 if [ -e $PIDFILE ] &&  kill -0 `cat $PIDFILE` 
 then
-  echo "The another process is running"
+  echo "The another process is running."
   exit 1
 fi
 
