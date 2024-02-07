@@ -6,4 +6,5 @@ composer.phar
 # composer.lock
 
 .token
+.config.ini
 .vscode

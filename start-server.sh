@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 PIDFILE=${HOME}/.m039ServerBot.pid
 
@@ -8,8 +8,10 @@ then
   exit 1
 fi
 
-export TOKEN=$(<.token)
+source <(grep = .config.ini)
 
-nohup php8.3 src/Server.php >/dev/null 2>&1&
+export TOKEN
+
+nohup $PHP src/Server.php >/dev/null 2>&1&
 
 echo $! > $PIDFILE

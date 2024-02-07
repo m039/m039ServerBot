@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 PIDFILE=${HOME}/.m039ServerBot.pid
 

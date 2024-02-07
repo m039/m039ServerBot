@@ -1,5 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-export TOKEN=$(<.token)
+source <(grep = .config.ini)
 
-php8.3 src/Server.php
+export TOKEN
+
+$PHP src/Server.php

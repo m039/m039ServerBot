@@ -3,9 +3,10 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use SergiX44\Nutgram\Nutgram;
+use SergiX44\Nutgram\Configuration;
 use m039\PollingPlus;
 
-$bot = new Nutgram(getenv('TOKEN'));
+$bot = new Nutgram(getenv('TOKEN'), new Configuration(enableHttp2: false));
 $count = 0;
 $runnginMode = new PollingPlus();
 $timerMessageId = null;
