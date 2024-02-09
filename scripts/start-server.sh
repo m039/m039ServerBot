@@ -11,7 +11,11 @@ fi
 source <(grep = .config.ini)
 
 export TOKEN
+export DB_HOST
+export DB_USERNAME
+export DB_PASSWORD
+export DB_DATABASE
 
-nohup $PHP src/Server.php >/dev/null 2>&1&
+nohup $PHP src/ServerMain.php >/dev/null 2>&1&
 
 echo $! > $PIDFILE
