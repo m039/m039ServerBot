@@ -23,7 +23,7 @@ $bot->middleware(function (Nutgram $bot, $next) {
 });
 
 $bot->onCommand('start', function(Nutgram $bot) {
-    $bot->sendMessage('Привет! Используй команды /subscribe или /unsubscribe, чтобы подписаться на уведомления о том доступен ли сейчас сайт m039.site. Еще есть команда /clicker для проверки работает ли бот.');
+    $bot->sendMessage('Используйте команды /subscribe или /unsubscribe, чтобы подписаться на уведомления о том доступен ли сейчас сайт m039.site. Еще есть команда /clicker для проверки работает ли бот.');
 });
 
 $bot->onCommand("clicker", function (Nutgram $bot) {
