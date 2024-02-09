@@ -8,4 +8,4 @@ export DB_USERNAME
 export DB_PASSWORD
 export DB_DATABASE
 
-nohup $PHP src/CheckServerMain.php
+$PHP src/CheckServerMain.php
