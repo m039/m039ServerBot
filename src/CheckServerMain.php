@@ -12,7 +12,7 @@ $db = DBManager::createInstance();
 $entries = $db->getAllEntries();
 
 if (count($entries) == 0) {
-    exit("No users.");
+    exit("No users.\n");
 }
 
 $subscribed = [];
@@ -23,7 +23,7 @@ foreach ($entries as $entry) {
 }
 
 if (count($subscribed) == 0) {
-    exit("No subscribed users.");
+    exit("No subscribed users.\n");
 }
 
 $checker = new ServerChecker();
