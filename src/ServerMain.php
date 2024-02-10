@@ -2,17 +2,13 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use m039\DBManager;
+use m039\DB\DBManager;
 use SergiX44\Nutgram\Nutgram;
 use SergiX44\Nutgram\Configuration;
-use m039\PollingPlus;
 
 $bot = new Nutgram(getenv('TOKEN'), new Configuration(enableHttp2: false));
 $db = DBManager::createInstance();
 $count = 0;
-$runnginMode = new PollingPlus();
-
-$bot->setRunningMode($runnginMode);
 
 $bot->middleware(function (Nutgram $bot, $next) {
     if ($bot->userId() == 74792267) {

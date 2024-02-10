@@ -1,7 +1,6 @@
 <?php
 
-namespace m039;
-use PDOException;
+namespace m039\DB;
 
 class DBManager {
     private string $host;
@@ -9,9 +8,9 @@ class DBManager {
     private string $password;
     private string $database;
 
-    private $connection;
+    private \PDO $connection;
 
-    private $previousTime;
+    private int $previousTime = 0;
     
     public function __construct(
         string $host = null, 
@@ -83,20 +82,18 @@ class DBManager {
     }
 
     public function updateEntry(DBEntry $entry) {
-        $server_is_online = $entry->server_is_online? 1: 0;
-        $subscribed = $entry->subscribed? 1 : 0;
-
-        $statement = $this->getPDO()->prepare("UPDATE server_bot SET server_is_online=?, subscribed=? WHERE _id=?");
-        $statement->bindParam(1, $server_is_online, \PDO::PARAM_INT);
-        $statement->bindParam(2, $subscribed, \PDO::PARAM_INT);
-        $statement->bindParam(3, $entry->_id, \PDO::PARAM_INT);
-        $statement->execute();
+        $statement = $this->getPDO()->prepare("UPDATE server_bot SET server_is_online=:server_is_online, subscribed=:subscribed WHERE _id=:_id");
+        $statement->execute([
+            "server_is_online" => $entry->server_is_online,
+            "subscribed" => $entry->subscribed,
+            "_id" => $entry->_id
+        ]);
     }
 
     private function createTableIfNotExist() {
         try {
             $this->getPDO()->query("DESCRIBE server_bot");
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             echo "Creating the table.\n";
             $this->getPDO()->query(
                 "CREATE TABLE server_bot (_id INT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, chat_id INT NOT NULL, server_is_online BOOLEAN NOT NULL DEFAULT 1, subscribed BOOLEAN NOT NULL DEFAULT 1, PRIMARY KEY (_id))"

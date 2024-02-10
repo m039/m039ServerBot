@@ -4,7 +4,8 @@ namespace m039;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use m039\ServerChecker;
+use m039\Utils\ServerChecker;
+use m039\DB\DBManager;
 use SergiX44\Nutgram\Nutgram;
 use SergiX44\Nutgram\Configuration;
 use SergiX44\Nutgram\Telegram\Exceptions\TelegramException;

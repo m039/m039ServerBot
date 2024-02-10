@@ -1,6 +1,6 @@
 <?php
 
-namespace m039;
+namespace m039\DB;
 
 class DBEntry {
     public $_id;

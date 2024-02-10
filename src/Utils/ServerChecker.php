@@ -1,6 +1,6 @@
 <?php
 
-namespace m039;
+namespace m039\Utils;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
