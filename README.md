@@ -23,6 +23,6 @@ echo "DB_PASSWORD=..." >> .config.ini
 echo "DB_DATABASE=..." >> .config.ini
 ```
 
-Put this line into crontab: ```cd <project-directory> && bash scripts/start-server.sh```
+Put this line into crontab: ```cd <project-directory> && /bin/bash scripts/start-server.sh```
 
-Also, put this line into crontab: ```cd <project-directory> && bash scripts/run-check-server.sh```
+Also, put this line into crontab: ```cd <project-directory> && /bin/bash scripts/run-check-server.sh```
