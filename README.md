@@ -14,6 +14,7 @@ cd <project-directory>
 composer install
 
 echo "TOKEN=..." > .config.ini
+echo "PHP=..." >> .config.ini
 
 # To use this project you need an access to MySQL database.
 echo "DB_HOST=..." >> .config.ini
